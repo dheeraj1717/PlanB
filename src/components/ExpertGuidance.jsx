@@ -1,6 +1,6 @@
 import expertGuidanceData from "../constants/ExpertGuidanceData.json";
-import expertGuidance1 from "../../public/assets/expertGuidance-1.png";
-import expertGuidance2 from "../../public/assets/expertGuidance-2.png";
+import expertGuidance1 from "../../public/assets/ExpertGuidance-1.png";
+import expertGuidance2 from "../../public/assets/ExpertGuidance-2.png";
   
   const ExpertGuidance = () => {
     return (
