@@ -1,21 +1,15 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../public/assets/PlanBLogo.png";
-
-const navLinks = [
-  { name: "Home", path: "/" },
-  { name: "Travel to Jordan", path: "/travel-to-jordan" },
-  { name: "Holidays & Ticketing", path: "/holidays-ticketing" },
-  { name: "Luxury Events", path: "/luxury-events" },
-  { name: "Hajj & Umrah", path: "/hajj-umrah" },
-  { name: "Contact Us", path: "/contact" },
-  { name: "About Us", path: "/about" },
-];
+import { navLinks } from "../constants/NavbarLinks";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [language, setLanguage] = useState("EN");
-  const [showDropdown, setShowDropdown] = useState(false); // State to control dropdown visibility
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const location = useLocation(); // Get current route
 
   return (
     <nav className="w-full items-center bg-white z-50 top-0">
@@ -34,21 +28,28 @@ const Navbar = () => {
           <ul className="hidden xl:flex space-x-9">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <a
-                  href={link.path}
-                  className="text-[#167989] hover:text-[#0D0D0D] font-bold hover:transition duration-300"
+                <Link
+                  to={link.path}
+                  className={`font-bold hover:transition duration-300 ${
+                    location.pathname === link.path
+                      ? "text-black" // Active link (black color)
+                      : "text-[#167989] hover:text-[#0D0D0D]"
+                  }`}
                 >
                   {link.name}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
           {/* Login & Language Selection */}
           <div className="flex items-center space-x-4">
-            <button className="text-[#167989] border-[2px] sm:border-[3px] border-[#0D0D0D] font-bold text-[14px] sm:text-[16px] leading-[18.38px] px-4 py-1 rounded-[5px] cursor-pointer">
+            <Link
+              to="/login"
+              className="text-[#167989] border-[2px] sm:border-[3px] border-[#0D0D0D] font-bold text-[14px] sm:text-[16px] leading-[18.38px] px-4 py-1 rounded-[5px] cursor-pointer"
+            >
               Login
-            </button>
+            </Link>
 
             {/* Language Dropdown */}
             <div className="relative text-[#167989] font-bold z-[100] text-[14px] sm:text-[16px]">
@@ -99,23 +100,26 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-{isOpen && (
-  <div className="absolute top-[80px] sm:top-[100px] left-0 w-full bg-white shadow-md p-4 z-50">
-    <ul className="flex flex-col space-y-3">
-      {navLinks.map((link, index) => (
-        <li key={index}>
-          <a
-            href={link.path}
-            className="text-[#167989] hover:text-[#0D0D0D] font-semibold"
-          >
-            {link.name}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
+      {isOpen && (
+        <div className="absolute top-[80px] sm:top-[100px] left-0 w-full bg-white shadow-md p-4 z-50">
+          <ul className="flex flex-col space-y-3">
+            {navLinks.map((link, index) => (
+              <li key={index}>
+                <Link
+                  to={link.path}
+                  className={`font-semibold ${
+                    location.pathname === link.path
+                      ? "text-black" // Active link (black color)
+                      : "text-[#167989] hover:text-[#0D0D0D]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

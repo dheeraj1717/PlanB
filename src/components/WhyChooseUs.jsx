@@ -1,8 +1,8 @@
 import whyChooseUsData from "../constants/WhyChooseUsData.json";
 const WhyChooseUs = () => {
   return (
-    <div className="mx-auto max-w-[1440px] px-2 sm:px-4 xl:px-16">
-      <h1 className="text-[32px] font-bold text-[#0D0D0D] mt-[35%] md:mt-[15%] text-center sm:text-left">
+    <div className="mx-auto max-w-[1440px] px-2 sm:px-4 xl:px-16  xl:mb-[10%]">
+      <h1 className="text-[32px] font-bold text-[#0D0D0D] mt-[40%] sm:mt-[35%] md:mt-[20%] text-center sm:text-left">
         Why Choose Plan <span className="text-[#167989]">B</span>
       </h1>
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 lg:gap-0 justify-items-center sm:justify-items-normal">

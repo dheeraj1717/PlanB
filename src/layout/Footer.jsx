@@ -11,7 +11,7 @@ const Footer = () => {
       }}
     >
       {/* Footer Top Section */}
-      <div className="bg-[#167989] grid sm:grid-cols-2 md:grid-cols-4 py-4 px-8 lg:px-16 gap-y-4 md:gap-0">
+      <div className="bg-[#167989] flex flex-col lg:flex-row sm:grid lg:flex justify-between sm:grid-cols-2 md:grid-cols-4 py-6 px-8 lg:px-16 gap-y-4 md:gap-0 items-center">
         {footerTop.map((item, index) => (
           <div className="flex flex-col items-center text-center" key={index}>
             <img
@@ -28,7 +28,7 @@ const Footer = () => {
 
       {/* Footer Links Section */}
       <div className="py-12 px-10 md:py-20 md:px-16">
-        <div className="flex flex-col items-center md:items-start md:flex-row gap-[15%] lg:gap-[25%]">
+        <div className="flex flex-col items-center md:items-start md:flex-row gap-[15%] lg:gap-[20%] lg:px-10">
           <div className="relative max-w-[300px]">
             <img
               src="/assets/PlanBLogo.png"
@@ -45,10 +45,10 @@ const Footer = () => {
           <div className="flex flex-col text-center sm:text-left sm:flex-row gap-12 lg:gap-16 mt-5 md:mt-0">
             {Object.values(footerLinks).map((section, index) => (
               <div className="flex flex-col" key={index}>
-                <h3 className="text-lg font-bold text-[#0D0D0D]">
+                <h3 className="text-[18px] sm:text-[21px] font-bold text-[#0D0D0D]">
                   {section.title}
                 </h3>
-                <ul className="mt-2 space-y-2">
+                <ul className="mt-3 sm:mt-4 space-y-2 text-[16px] sm:text-[18px]">
                   {section.links.map((link, linkIndex) => (
                     <li key={linkIndex}>
                       <a href={link.path} className="text-white transition">
@@ -61,8 +61,8 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="mt-12 md:mt-10 flex flex-col items-center gap-6  md:flex-row justify-between">
-          <p className="text-[18px] font-medium leading-[22.5px] max-w-[500px] text-white text-center md:text-left">
+        <div className="mt-12 md:mt-16 flex flex-col items-center gap-6  md:flex-row justify-between md:pr-10">
+          <p className="text-[16px] sm:text-[18px] font-medium leading-[22.5px] max-w-[500px] text-white text-center md:text-left">
             Plan <span className="text-[#167989] font-medium">B</span> Travel
             Tourism is a Customer-Oriented Organization Offering Professional,
             World-Class Tourism Solutions.
