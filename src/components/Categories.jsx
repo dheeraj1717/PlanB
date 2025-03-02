@@ -3,7 +3,7 @@ import categoriesData from "../constants/CategoriesData.json";
 
 function Categories() {
   return (
-    <div className="flex justify-center mt-10 sm:mt-20 w-full">
+    <div className="flex justify-center mt-10 sm:mt-24 w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12 items-center">
         {categoriesData.map((category, index) => (
           <div
