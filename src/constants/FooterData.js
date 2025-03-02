@@ -22,24 +22,24 @@ export const footerTop = [
       title: "Company",
       links: [
         { name: "About Us", path: "/about" },
-        { name: "Careers", path: "/careers" },
-        { name: "Blog", path: "/blog" },
+        { name: "Contacts", path: "/contact" },
+        { name: "Home", path: "/" },
       ],
     },
     contact: {
-      title: "Contact",
+      title: "Contact Us",
       links: [
-        { name: "Contact Us", path: "/contact" },
-        { name: "Help Center", path: "/help" },
-        { name: "FAQs", path: "/faqs" },
+        { name: "Help/FAQ", path: "/faqs" },
+        { name: "Press", path: "/press" },
+        { name: "Affilates", path: "/affilates" },
       ],
     },
     support: {
       title: "Support",
       links: [
-        { name: "Terms of Service", path: "/terms" },
-        { name: "Privacy Policy", path: "/privacy" },
-        { name: "Refund Policy", path: "/refunds" },
+        { name: "Help & Support", path: "/support" },
+        { name: "Term & Condition", path: "/terms-and-conditions" },
+        { name: "24/9H Services", path: "/services" },
       ],
     },
   };

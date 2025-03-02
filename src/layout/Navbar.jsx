@@ -15,13 +15,13 @@ const Navbar = () => {
     <nav className="w-full items-center bg-white z-50 top-0">
       <div className="max-w-[1600px] h-[80px] sm:h-[100px] mx-auto flex justify-between items-end px-6 pb-6">
         {/* Logo */}
-        <div>
+        <Link to="/">
           <img
             src={Logo}
             alt="PlanB"
             className="absolute top-[20px] sm:top-0 z-50  w-[140px] sm:w-[300px] max-h-[100px] xl:max-h-[140px]"
           />
-        </div>
+        </Link>
 
         <div className="flex items-center gap-9">
           {/* Desktop Navigation */}

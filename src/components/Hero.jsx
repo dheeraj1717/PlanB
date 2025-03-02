@@ -2,7 +2,7 @@ import HeroPlanB from "../../public/assets/HeroPlanB.jpeg";
 
 const Hero = () => {
   return (
-    <div className="relative w-full h-[30vh] lg:h-[80vh]">
+    <div className="relative w-full h-[30vh] sm:h-[75vh] lg:h-[80vh]">
       {/* Gradient*/}
       <div
         className="absolute top-0 left-0 w-full h-[150px]"
